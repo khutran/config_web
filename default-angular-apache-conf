@@ -1,0 +1,14 @@
+<VirtualHost *:6669>
+    ServerName xxx.com
+    ServerAlias *
+    VirtualDocumentRoot "/path/dist"
+
+    <Directory "/var/www/web/">
+        Options FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog "/var/log/httpd/error.log"
+    CustomLog "/var/log/httpd/access.log" combined
+</VirtualHost>
