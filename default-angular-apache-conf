@@ -1,9 +1,8 @@
 <VirtualHost *:6669>
     ServerName xxx.com
-    ServerAlias *
-    VirtualDocumentRoot "/path/dist"
+   DocumentRoot "/path/dist"
 
-    <Directory "/var/www/web/">
+    <Directory "/path/">
         Options FollowSymLinks
         AllowOverride All
         Require all granted
