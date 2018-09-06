@@ -1,1 +1,23 @@
 
+<VirtualHost 127.0.0.1:6669>
+    ServerName xxx.com
+    DocumentRoot "/path/public"
+    # #PHP5.6
+    <Directory "/var/www/web/">
+        Options FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    <IfModule mod_ruid2.c>
+        RMode config
+        RUidGid php-fpm php-fpm
+        RGroups apache
+    </IfModule>
+    <IfModule itk.c>
+        AssignUserID php-fpm php-fpm
+    </IfModule>
+
+    ErrorLog "/var/log/httpd/error.log"
+    CustomLog "/var/log/httpd/access.log" combined
+</VirtualHost>
