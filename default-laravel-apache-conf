@@ -2,8 +2,7 @@
 <VirtualHost 127.0.0.1:6669>
     ServerName xxx.com
     DocumentRoot "/path/public"
-    # #PHP5.6
-    <Directory "/var/www/web/">
+    <Directory "/path/">
         Options FollowSymLinks
         AllowOverride All
         Require all granted
