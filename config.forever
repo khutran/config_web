@@ -1,0 +1,10 @@
+{
+    "uid": "api-nutrio.vicoders.com",
+    "append": true,
+    "watch": false,
+    "script": "./dist/bin/www",
+    "sourceDir": "/var/www/web/api-nutrio.vicoders.com/workspace",
+    "minUptime" : 1000,
+    "spinSleepTime" : 1000,
+    "args": ["--port", "3020"]
+}
